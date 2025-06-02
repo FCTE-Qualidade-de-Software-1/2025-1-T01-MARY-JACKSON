@@ -10,13 +10,17 @@ theme:
     - navigation.tabs
     - navigation.indexes
     - toc.integrate
+    - navigation.top
   palette:
     scheme: default
 
 nav:
   - Visão Geral: index.md
   - Unidade 1:
-      - Relatório: EU1/index.md
+      - Introdução: EU1/index.md
+      - Modelo de Qualidade: EU1/modelo-qualidade.md
+      - Plano GQM: EU1/gqm.md
+      - Equipe: EU1/equipe.md
   - Unidade 2:
       - Plano de Avaliação: EU2/plano-avaliacao.md
       - Tabela de Métricas: EU2/tabela-metricas.md
@@ -35,3 +39,5 @@ markdown_extensions:
   - footnotes
   - def_list
   - pymdownx.tasklist
+  - pymdownx.superfences
+  - tables

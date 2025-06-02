@@ -1,116 +1,159 @@
-# Relatório - Unidade 1
+# Introdução - Avaliação de Qualidade AgroMart
 
-## Avaliação de Qualidade do Software - AGROMART
+## Apresentação do Projeto
 
-### Grupo: Mary Jack
-
-**Integrantes:**
-- Luana de Lima Medeiros – 190091444
-- Lucas Oliveira Meireles – 190016647
-- Gabriel Fernando de Jesus Silva – 222022162
-- Guilherme Basílio do Espírito Santo – 160007615
-- Pablo Santos Costa – 180128817
-- Vinicius Angelo de Brito Vieira – 190118059
+Este documento apresenta a **avaliação inicial de qualidade** do software **AgroMart**, conduzida pela equipe **MARY-JACKSON** no contexto da disciplina de Qualidade de Software (2025.1) da Universidade de Brasília.
 
 ---
 
-## **Propósito da Avaliação**
+## 🎯 **Propósito da Avaliação**
 
-Este relatório tem como objetivo realizar uma avaliação estruturada da qualidade de usabilidade do sistema AGROMART, com base na norma **ISO/IEC 25010:2011**. A análise visa identificar oportunidades de melhoria e recomendações práticas, a partir da observação direta das interfaces web (painel de administração) e mobile (aplicativo do usuário final).
+Realizar uma avaliação estruturada da qualidade de usabilidade do sistema AGROMART, baseada na norma **ISO/IEC 25010:2011**, identificando oportunidades de melhoria e fornecendo recomendações práticas para otimizar a experiência do usuário.
 
-Como apoio complementar, foram também consideradas **heurísticas de Nielsen (1994)** para reforçar a perspectiva prática de interação humano-computador.
+### Objetivos Específicos
 
----
-
-## **Tipo de Produto**
-
-O AGROMART é uma solução digital voltada para conectar Comunidades que Sustentam a Agricultura (CSA) a consumidores locais, promovendo uma cadeia de produção e consumo sustentável. O sistema conta com:
-
-- **Interface web (Strapi Dashboard)**: voltada à gestão de conteúdo, usuários, pedidos e meios de pagamento por parte dos administradores das CSAs.
-- **Interface mobile (App)**: voltada ao público consumidor/co-agricultor, com funcionalidades como login, histórico de pedidos, busca por lojas, carrinho e plano de assinaturas.
-
-Ambas as versões foram executadas localmente para esta avaliação, sendo identificadas limitações como ausência de publicação oficial nas lojas de apps e falhas de conectividade com a API em ambiente de testes.
+- ✅ **Avaliar a usabilidade** das interfaces web e mobile segundo ISO 25010
+- ✅ **Aplicar o framework GQM** para estruturar métricas de qualidade
+- ✅ **Identificar gaps de acessibilidade** e conformidade WCAG
+- ✅ **Propor melhorias concretas** baseadas em evidências observadas
 
 ---
 
-## **Conexões com os Objetivos de Desenvolvimento Sustentável (ODS)**
+## 📱 **Sobre o AgroMart**
 
-- **ODS 11** – Cidades e Comunidades Sustentáveis
-- **ODS 15** – Vida Terrestre
+### Visão do Produto
 
----
+O **AgroMart** é uma solução digital que conecta **Comunidades que Sustentam a Agricultura (CSA)** a consumidores locais, promovendo uma cadeia de produção e consumo sustentável.
 
-## **Modelo de Qualidade Utilizado**
+### Componentes Avaliados
 
-Baseado na norma **ISO/IEC 25010**, com foco em usabilidade e suas subcaracterísticas.
+| Componente | Público-Alvo | Funcionalidades Principais |
+|------------|--------------|----------------------------|
+| **🖥️ Interface Web (Strapi Dashboard)** | Administradores de CSA | • Gestão de conteúdo<br>• Controle de usuários<br>• Gerenciamento de pedidos<br>• Configuração de pagamentos |
+| **📱 Interface Mobile (App)** | Consumidores/Co-agricultores | • Login e autenticação<br>• Histórico de pedidos<br>• Busca por lojas/produtos<br>• Carrinho de compras<br>• Planos de assinatura |
 
----
+### Limitações do Ambiente de Teste
 
-## **Análise de Usabilidade por Subcaracterística**
-
-As análises detalhadas foram realizadas para:
-
-- **Reconhecimento da Adequação**
-- **Aprendizado**
-- **Operabilidade**
-- **Proteção contra Erros do Usuário**
-- **Estética da Interface**
-- **Acessibilidade**
+!!! warning "Contexto de Avaliação"
+    - **Ambiente local**: Sistema executado localmente, não em produção
+    - **Dados simulados**: Ausência de dados reais de uso
+    - **APIs limitadas**: Algumas funcionalidades com falhas de conectividade
+    - **Sem publicação oficial**: App não disponível em lojas oficiais
 
 ---
 
-## **Tabela de Avaliação de Usabilidade (Síntese)**
+## 🌍 **Conexões com os ODS**
 
-| Subcaracterística | Web (Admin) – Pontos Fortes | Mobile (App) – Pontos Fortes | Pontos Fracos / Sugestões de Melhoria |
-| ----- | ----- | ----- | ----- |
-| **Reconhecimento da Adequação** | Menu lateral com rótulos claros e módulos nomeados | Layout direto ao ponto com funcionalidades-chave visíveis | Incluir onboarding introdutório sobre o conceito de CSA e fluxo do app |
-| **Aprendizado** | Navegação padronizada e consistente no dashboard | Abas intuitivas e ícones familiares | Incluir tutoriais rápidos e dicas nos campos para novos usuários |
-| **Operabilidade** | Ações diretas, boa organização das seções | Fluxo de pedidos funcional e simples | Incluir confirmações de ações críticas e melhorar feedbacks de interação |
-| **Proteção contra Erros** | Campos obrigatórios marcados com validações básicas | Botões de adição com controle de quantidade | Adicionar mensagens específicas de erro e feedback ao usuário |
-| **Estética da Interface** | Layout moderno, escuro e limpo | Cores agradáveis e design leve | Preencher áreas vazias com guias visuais, banners ou frases educativas |
-| **Acessibilidade** | Compatível com teclado básico | Tipografia legível e botões grandes | Implementar suporte a leitores de tela e modo alto contraste (WCAG) |
+O projeto AgroMart contribui diretamente para os **Objetivos de Desenvolvimento Sustentável (ODS)**:
 
----
+### 🏙️ **ODS 11 - Cidades e Comunidades Sustentáveis**
+- Fortalece cadeias locais de abastecimento
+- Reduz distâncias de transporte de alimentos
+- Promove segurança alimentar urbana
 
-## **Conclusões**
-
-O AGROMART apresenta uma proposta sólida e socialmente relevante. Suas interfaces entregam uma experiência geralmente intuitiva e funcional. Contudo, há importantes oportunidades de melhoria na usabilidade, especialmente no que se refere à acessibilidade, feedbacks de ação, e explicações para novos usuários.
+### 🌱 **ODS 15 - Vida Terrestre** 
+- Incentiva práticas agrícolas sustentáveis
+- Apoia biodiversidade através de CSAs
+- Reduz uso de agrotóxicos via agricultura orgânica
 
 ---
 
-## **Tabela de Contribuições**
+## 🔬 **Metodologia de Avaliação**
 
-| Nome | Matrícula | Contribuição |
-| :---- | :---- | :---- |
-| Lucas Oliveira Meireles | 190016647 | Estrutura geral, ODS, modelo de qualidade |
-| Vinicius Angelo de Brito Vieira | 190118059 | Execução local e análise técnica, melhorias no documento |
-| Gabriel Fernando de Jesus Silva | 222022162 | Coleta de prints e painel web |
-| Guilherme Basílio | 160007615 | Bibliografia e categorização |
-| Pablo Santos Costa | 180128817 | Análise mobile e melhorias |
-| Luana de Lima Medeiros | 190091444 | Organização e revisão textual |
+### Framework Principal: **ISO/IEC 25010:2011**
+
+Focamos nas seguintes **características de qualidade**:
+
+1. **🎯 Usabilidade** (prioridade máxima)
+   - Reconhecimento da adequação
+   - Aprendizado
+   - Operabilidade
+   - Proteção contra erros
+   - Estética da interface
+   - Acessibilidade
+
+2. **🛡️ Confiabilidade** (segunda prioridade)
+   - Maturidade
+   - Disponibilidade
+   - Tolerância a falhas
+
+### Métodos Complementares
+
+- **Heurísticas de Nielsen (1994)**: Validação prática de usabilidade
+- **Framework GQM**: Estruturação Goal → Question → Metric
+- **Observação direta**: Análise hands-on das interfaces
 
 ---
 
-## **Bibliografia**
+## 📊 **Estrutura da Avaliação EU1**
 
-- ISO/IEC 25010:2011 – Systems and software quality models.
-- Nielsen, Jakob (1994). Usability Engineering.
-- Barbosa, S. D. J. et al. (2021) Interação Humano-Computador e Experiência do Usuário.
-- CSA Brasil. [https://csabrasil.org/csa/](https://csabrasil.org/csa/)
-- AgroMart GitHub: [https://github.com/AgroMart/mobile-client](https://github.com/AgroMart/mobile-client)
-- TCCs UnB: [https://bdm.unb.br/handle/10483/30718](https://bdm.unb.br/handle/10483/30718), [https://bdm.unb.br/handle/10483/30720](https://bdm.unb.br/handle/10483/30720)
+| Documento | Conteúdo | Objetivo |
+|-----------|----------|----------|
+| **[📋 Modelo de Qualidade](modelo-qualidade.md)** | Priorização ISO 25010, stakeholders, justificativas | Estabelecer requisitos de avaliação |
+| **[🎯 Plano GQM](gqm.md)** | Goals, Questions, Metrics com rastreabilidade ISO | Estruturar medição objetiva |
+| **[👥 Equipe](equipe.md)** | Contribuições, metodologia, % participação | Transparência e responsabilidades |
+| **📈 Síntese de Resultados** | Tabela consolidada de achados | Quick wins e prioridades |
 
 ---
 
-## **Capturas de Tela da Aplicação**
+## 🔍 **Síntese de Resultados**
 
-*Nota: As capturas de tela mencionadas no documento original devem ser adicionadas nesta seção quando disponíveis.*
+### Tabela de Avaliação (Resumo Executivo)
+
+| Sub-característica | ✅ Pontos Fortes | ⚠️ Oportunidades de Melhoria |
+|--------------------|------------------|------------------------------|
+| **Reconhecimento da Adequação** | Menu lateral claro (web)<br>Layout direto (mobile) | Falta onboarding sobre CSAs |
+| **Aprendizado** | Navegação consistente<br>Ícones familiares | Ausência de tutoriais contextuais |
+| **Operabilidade** | Fluxo de pedidos funcional<br>Ações diretas | Melhorar feedbacks de interação |
+| **Proteção contra Erros** | Validações básicas<br>Campos obrigatórios | Mensagens de erro mais específicas |
+| **Estética da Interface** | Design moderno e limpo<br>Cores agradáveis | Preencher espaços vazios |
+| **Acessibilidade** | Tipografia legível<br>Botões grandes | Implementar WCAG 2.1, leitores de tela |
+
+---
+
+## 🎯 **Principais Conclusões**
+
+### ✅ **Aspectos Positivos**
+- **Proposta sólida** com relevância social clara
+- **Interfaces funcionais** e relativamente intuitivas
+- **Design visual agradável** e moderno
+- **Fluxos básicos** operacionais
+
+### ⚠️ **Áreas Prioritárias para Melhoria**
+1. **Acessibilidade**: Conformidade WCAG 2.1
+2. **Onboarding**: Explicação do conceito CSA
+3. **Feedback**: Mensagens de erro e confirmações
+4. **Tutoriais**: Guias contextuais para novos usuários
+
+---
+
+## 🚀 **Próximos Passos (EU2)**
+
+### Planejamento de Aprofundamento
+
+| Atividade | Responsável | Método | Timeline |
+|-----------|-------------|--------|----------|
+| **Testes de Usabilidade** | Gabriel + Pablo | Sessões moderadas (5-8 usuários) | EU2 |
+| **Métricas Automatizadas** | Vinicius | Lighthouse CI, análise estática | EU2 |
+| **Auditoria de Acessibilidade** | Guilherme | WAVE, axe-core, testes manuais | EU2 |
+| **Plano de Avaliação Detalhado** | Lucas | ISO 25040 Fases 2-3 | EU2 |
+
+---
+
+## 📚 **Bibliografia**
+
+- **ISO/IEC 25010:2011** – Systems and software quality models
+- **Nielsen, Jakob (1994)** – Usability Engineering  
+- **Barbosa, S. D. J. et al. (2021)** – Interação Humano-Computador e Experiência do Usuário
+- **CSA Brasil** – [https://csabrasil.org/csa/](https://csabrasil.org/csa/)
+- **AgroMart GitHub** – [https://github.com/AgroMart/mobile-client](https://github.com/AgroMart/mobile-client)
 
 ---
 
 ## Histórico do documento
 
-| Versão | Data       | Descrição            | Autor                                                  |
-| ------ | ---------- | -------------------- | ------------------------------------------------------ |
-| 1.0    | 01/05/2025 | Criação do documento | [Vinicius Vieira](https://github.com/viniciusvieira00) |
-| 1.1    | 01/05/2025 | Adição do conteúdo completo do relatório | [Vinicius Vieira](https://github.com/viniciusvieira00) |
+| Versão | Data | Descrição | Autor |
+|--------|------|-----------|--------|
+| 1.0 | 01/05/2025 | Criação do documento | [Vinicius Vieira](https://github.com/viniciusvieira00) |
+| 1.1 | 01/05/2025 | Adição do conteúdo completo do relatório | [Vinicius Vieira](https://github.com/viniciusvieira00) |
+| 2.0 | 01/05/2025 | Reestruturação como introdução da EU1 | [Vinicius Vieira](https://github.com/viniciusvieira00) |
