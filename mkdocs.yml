@@ -1,0 +1,37 @@
+site_name: MARY-JACKSON - Qualidade de Software
+site_url: https://fcte-qualidade-de-software-1.github.io/2025-1-T01-MARY-JACKSON
+repo_url: https://github.com/FCTE-Qualidade-de-Software-1/2025-1-T01-MARY-JACKSON
+repo_name: 2025-1-T01-MARY-JACKSON
+
+theme:
+  name: material
+  language: pt
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - toc.integrate
+  palette:
+    scheme: default
+
+nav:
+  - Visão Geral: index.md
+  - Unidade 1:
+      - Relatório: EU1/index.md
+  - Unidade 2:
+      - Plano de Avaliação: EU2/plano-avaliacao.md
+      - Tabela de Métricas: EU2/tabela-metricas.md
+  - Unidade 3:
+      - Relatório Final: EU3/index.md
+
+plugins:
+  - search
+  - git-revision-date-localized
+  - minify
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - footnotes
+  - def_list
+  - pymdownx.tasklist
